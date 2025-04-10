@@ -66,6 +66,7 @@ sexo_options = [{"label": s, "value": s} for s in df_sexo_melted["sexo"].dropna(
 idade_options = [{"label": i, "value": i} for i in df_idade_melted["grupo_de_idade"].dropna().unique()]
 
 app = dash.Dash(__name__)
+server = app.server
 app.title = "Dashboard de Desemprego"
 
 app.layout = html.Div(children=[
